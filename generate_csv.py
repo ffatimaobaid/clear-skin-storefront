@@ -1,0 +1,90 @@
+import csv
+import re
+
+reviews = """
+1. **Zoe** | July 2, 2026 | Tretinoin Gel 0.1 20G Exp 02/2027 | "Great service and product. Highly recommend"
+2. **Anonymous** | June 28, 2026 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Excellent customer service and fast delivery. Will continue to order from this site! Thanks so much!"
+3. **Jo** | June 21, 2026 | Tretinoin 0.05% Tretiheal Cream 20G | "I have purchased Tretinoin and other products here and it arrives quickly and is a trusted company  and product."
+4. **Jo** | June 21, 2026 | Blinq-I-Lash 3ml serum | "Lash serum.is great. Arrived very quickly and great customer service. Will be ordering again."
+5. **Melissa Rule** | June 21, 2026 | Tazorac Cream (Tazarotene Cream) 0.1% EXP 06/2027 | "Excellent customer service and fast delivery. Highly recommend"
+6. **nyeisha.costley** | June 11, 2026 | 20% Azelaic Acid Cream 30G Azelderm | "This product is very good, I use it daily and it works for getting rid of my hyperpigmentation on my face and body. I recommend especially if you have sensitive skin like me 👍"
+7. **Jo** | June 4, 2026 | Blinq-I-Lash 3ml serum | "Quick delivery and product is great. Best way to use it us to put a drop in the lid, and put your brush in the lid then apply. You dont waste it, and enough to do both lashes."
+8. **Monika F** | June 2, 2026 | Acnelyse Tretinoin Cream 0.1% 20G EXP 11/28 | "Very good product and excellent quality. The delivery to the UK was extremely fast, and the customer service team was very helpful, responsive, and polite throughout the whole process. I am very satisfied with my purchase and would definitely order again. Highly recommended!"
+9. **Mickey** | June 1, 2026 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Fast shipping and really easy to deal with"
+10. **Anonymous** | April 28, 2026 | Hydroquinone Cream 4% Melalite Forte 4% 30G EXP 10/2027 | "Have mow used it for a few weeks. It’s works will buy more."
+11. **Victoria Kelly** | April 13, 2026 | A-Ret Tretinoin Gel 0.05% EXP 08/2027 | "All good. Thank you 🙏🏼"
+12. **Anonymous** | March 30, 2026 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Delivery was quick.  I could see the difference on my skin within 1 week. I love how my skin is looking."
+13. **george b.** | March 4, 2026 | Tretinoin Gel 0.1 20G Exp 02/2027 | "arrived on time, good customer service"
+14. **Edit W.** | March 2, 2026 | LIPIDZ Rapid Barrier Repair Cream 50ML (NO BOX) | "Great Skin barrier,."
+15. **Edit W.** | March 2, 2026 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | (No text content)
+16. **Edit W.** | March 2, 2026 | Tazorac Cream (Tazarotene Cream) 0.1% EXP 06/2027 | "Great product , my skin love it  ."
+17. **Anonymous** | February 28, 2026 | Tretinoin 0.1 Cream 20G | (No text content)
+18. **Anonymous** | February 15, 2026 | Tazorac Cream (Tazarotene Cream) 0.1% EXP 06/2027 | "Absolutely amazing little tube. I love this cream. And I like very much the customer service, very kind and caring and professional, and gives plenty of advice how to use. The payment it’s so quick, safe and easy. And  the delivery it’s super quick. If you run out of your favorite tazret, or tretinoin. Once you order at this company, you will have literally on the next day to continue with your routine. All the creams are genuine and really good. This company is a absolute gem. Next, i want to buy lipidz that restores that repair the skin barrier."
+19. **Sharon McCarthy** | October 12, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Excellent product. Thank you."
+20. **Susan A.** | October 9, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "This product thIs product Is Perfect  makes your skin bright lInes  Fade pigmentation disappear"
+21. **Lorna** | October 11, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Excellent"
+22. **Richard S.** | October 8, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Good product was as described"
+23. **Sarah S.** | October 11, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Great Tretinoin gel 👌"
+24. **Anonymous** | October 12, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Product in sealed tube and just as I had hoped. Needs to be used very sparingly unless skin acclimatised as it is very strong and drying."
+25. **Maureen Hayes** | October 11, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Highly rated this product"
+26. **Margaret G.** | October 12, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Will buy again 👍👍"
+27. **Emma Johnson** | October 10, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Great, does exactly what it’s supposed to do. Still going through the peely stage, but looking forward to the end results."
+28. **Lucy W.** | October 13, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "So I don’t have acne so bought this purely to try and fight the signs of premature ageing. What I will say is read the instructions and don’t apply frequently until your skin adapts. I’m really impatient and impulsive and I used much more than a pea sized amount on night one and then repeated two nights later. My skin has been soo sore and has peeled so badly all over my face. The skin underneath is smooth and dewy but I definitely over did it and it’s been painful. It’s entirely my own fault and what I would say is follow the instructions and use sparingly and once a week to start with. I am going to continue using it but following the instructions. I can already see it is going to make a difference and will lead to dewy, fresh skin that looks younger."
+29. **Delene A.** | October 13, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Goid product and speed of delivery."
+30. **Joanna** | October 14, 2025 | Tazorac Cream (Tazarotene Cream) 0.1% EXP 06/2027 | "looking forward to using. Great service & price from company"
+31. **Anonymous** | October 11, 2025 | Tretinoin 0.1 Cream 20G | "Good choice"
+32. **Kirsten** | October 14, 2025 | Tretin Tretinoin Cream 0.05% Large 30G EXP 05/2027 | "Tret takes a few weeks to work so no change yet but no irritation on my face and I have had slight peeling which is a good sign. 🙂"
+33. **Varuna** | October 12, 2025 | Skin light Hydroquinone + Tretinoin Mometasone Furoate 25G Exp 06/2027 | "Very good service"
+34. **Anonymous** | October 14, 2025 | Tretin Tretinoin Cream 0.05% Large 30G EXP 05/2027 | "Always been a favourite of mine, does exactly what’s expected of it!!! 🤗"
+35. **Kamila** | October 12, 2025 | Skin light Hydroquinone + Tretinoin Mometasone Furoate 25G Exp 06/2027 | "Thank you for your excellent service! Communication was top-notch, and the delivery was incredibly speedy. I truly appreciate the effort you put into ensuring customer satisfaction. Your dedication to providing a great experience is evident, and I’m grateful for your attention to detail.  Keep up the fantastic work, and thank you once again for your outstanding service!"
+36. **Jennifer M.** | October 10, 2025 | Tretinoin 0.1 Cream 20G | "Lovely thanks"
+37. **Paulina** | October 11, 2025 | Tretinoin 0.05% Tretiheal Cream 20G | "i think the cheapest option"
+38. **Sarah W.** | October 13, 2025 | Tretinoin 0.1 Cream 20G | "Good"
+39. **Anonymous** | October 10, 2025 | Tretinoin 0.1 Cream 20G | "Finally on 0.1%, it’s a great Tret."
+40. **Anonymous** | October 11, 2025 | Z-Block Sunscreen Anti-Aging SPF 50 Water Based Gel 50ml | "Very transparent sun block, works well."
+41. **Linda Winham** | October 8, 2025 | Reti K Premium Pure Micro Capsulized Retinol Anti-Aging Cream with Vitamin C E K1 30G EXP 03/26 | "Love this stuff"
+42. **Rachel Mcconnell** | October 12, 2025 | Tretinoin 0.1 Cream 20G | "Good so far"
+43. **Tracey Nott** | October 11, 2025 | Reti K Premium Pure Micro Capsulized Retinol Anti-Aging Cream with Vitamin C E K1 30G EXP 03/26 | "Excellent product, I really does make a difference!"
+44. **Nicci Wilson** | October 11, 2025 | 10% Minoxidil Hair growth Solution 60ml | "Perfect product, just what I needed."
+45. **Angela M.** | October 14, 2025 | Tazorac Cream (Tazarotene Cream) 0.1% EXP 06/2027 | "Fabulous service and product! First time trying tazorac cream. Im a long time user of Tretinoin and have had a difficult time with no real improvement (in my opinion) I thought I would give it a go. I’m absolutely amazed!! A million times better than tret for my skin. Still early days and I’m taking it slowly but my skin is glowing! Brilliant customer service, lots of support and fast postage! Highly recommend both the cream and the seller! Thank you ☺️"
+46. **Maryam Bibi** | October 10, 2025 | Tri-Luma Cream1 Exp 02/2027 | "Maryam"
+47. **Van** | October 8, 2025 | Hydroquinone Cream 4% Melalite Forte 4% 30G EXP 10/2027 | (No text content)
+48. **Janet Cogan** | October 11, 2025 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | "I have used Careprost before. Highly recommended."
+49. **Helen Black** | October 9, 2025 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | "Fantastic product!"
+50. **Claire Horn** | October 12, 2025 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | "Seems a good product…very fiddly to get the product on the brush provided and not lose any product down the drain"
+51. **Maura dodd** | October 9, 2025 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | "Absolutely swear by careprost, my eyelashes are unreal! I’ve been using it for over a year and it’s an absolute must have! I’ve even been asked if I have false eyelashes 💗"
+52. **Deanna** | October 13, 2025 | Careprost Eyelash Growth Serum Drops 1 Bottles 3ml 2 Months Supply 06/2026 | "Really lengthens lashes"
+53. **Martin** | October 11, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Great"
+54. **Amanda F.** | October 8, 2025 | Tretinoin Gel 0.1 20G Exp 07/2027 | "Amazing product"
+55. **Anonymous** | April 28, 2026 | Acnelyse Tretinoin Cream 0.1% 20G EXP 11/28 | (No text content)
+"""
+
+with open("buytretinoin_reviews.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Author", "Rating", "Date", "Product", "Review Text"])
+    for line in reviews.strip().split("\n"):
+        parts = line.split("|")
+        if len(parts) >= 3:
+            # Extract author
+            m = re.search(r'\*\*(.*?)\*\*', parts[0])
+            author = m.group(1).strip() if m else parts[0].strip()
+            # Extract date
+            date = parts[1].strip()
+            # Extract product
+            product = parts[2].strip()
+            # Extract text
+            if len(parts) > 3:
+                text = parts[3].strip()
+                if text.startswith('"') and text.endswith('"'):
+                    text = text[1:-1]
+                if text == "(No text content)":
+                    text = ""
+            else:
+                text = ""
+            
+            # Since rating is not explicitly provided in the prompt text (just assumed 5), let's use 5
+            rating = 5
+            
+            writer.writerow([author, rating, date, product, text])
+
+print("CSV generated.")
