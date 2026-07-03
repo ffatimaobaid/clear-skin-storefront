@@ -18,8 +18,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center">
-          <img src={logoImg} alt="BuyTretinoin" className="h-9 w-auto object-contain" />
+        <Link to="/" className="flex items-center gap-2.5">
+          {/* T-pill icon */}
+          <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
+            <svg className="h-5 w-5" viewBox="0 0 60 60" fill="currentColor">
+              <rect x="6" y="8" width="48" height="20" rx="5" ry="5" />
+              <rect x="20" y="24" width="20" height="28" rx="4" ry="4" />
+            </svg>
+          </span>
+          <span className="text-xl font-medium tracking-tight font-display text-foreground">
+            Buy<span className="font-semibold text-primary">Tretinoin</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

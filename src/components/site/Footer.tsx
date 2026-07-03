@@ -12,8 +12,17 @@ export function Footer() {
         </div>
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center">
-              <img src={logoImg} alt="BuyTretinoin" className="h-9 w-auto object-contain" />
+            <div className="flex items-center gap-2.5">
+              {/* T-pill icon */}
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground">
+                <svg className="h-5 w-5" viewBox="0 0 60 60" fill="currentColor">
+                  <rect x="6" y="8" width="48" height="20" rx="5" ry="5" />
+                  <rect x="20" y="24" width="20" height="28" rx="4" ry="4" />
+                </svg>
+              </span>
+              <span className="text-xl font-medium tracking-tight font-display text-foreground">
+                Buy<span className="font-semibold text-primary">Tretinoin</span>
+              </span>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Clinical-grade skincare shipped worldwide. Genuine products, discreet delivery, honest pricing.
