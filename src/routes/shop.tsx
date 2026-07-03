@@ -6,7 +6,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop — Dermora" },
+      { title: "Shop — BuyTretinoin" },
       { name: "description", content: "Browse all skincare, retinoids, hair growth and dermatology treatments." },
     ],
   }),

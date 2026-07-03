@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Twitter, Mail } from "lucide-react";
 import { TrustBadges } from "./TrustBadges";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -11,11 +12,8 @@ export function Footer() {
         </div>
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                D
-              </span>
-              <span className="text-lg font-semibold tracking-tight">Dermora</span>
+            <div className="flex items-center">
+              <img src={logoImg} alt="BuyTretinoin" className="h-9 w-auto object-contain" />
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Clinical-grade skincare shipped worldwide. Genuine products, discreet delivery, honest pricing.
@@ -47,7 +45,7 @@ export function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold tracking-tight">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>hello@dermora.co</li>
+              <li>hello@buytretinoin.com</li>
               <li>Mon–Fri, 9am–6pm GMT</li>
               <li className="flex items-center gap-3 pt-1">
                 <a href="#" aria-label="Instagram" className="hover:text-primary"><Instagram size={16} /></a>
@@ -58,7 +56,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border/60 pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <span>© {new Date().getFullYear()} Dermora. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} BuyTretinoin. All rights reserved.</span>
           <span>Prices in GBP. Shipping calculated at checkout.</span>
         </div>
       </div>

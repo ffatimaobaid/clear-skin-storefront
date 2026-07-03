@@ -5,7 +5,7 @@ import { CheckCircle2, MessageCircle } from "lucide-react";
 import { z } from "zod";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => ({ meta: [{ title: "Checkout — Dermora" }] }),
+  head: () => ({ meta: [{ title: "Checkout — BuyTretinoin" }] }),
   component: Checkout,
 });
 

@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
+import logoImg from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -17,9 +18,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground text-sm font-bold">D</span>
-          <span className="text-lg font-semibold tracking-tight">Dermora</span>
+        <Link to="/" className="flex items-center">
+          <img src={logoImg} alt="BuyTretinoin" className="h-9 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

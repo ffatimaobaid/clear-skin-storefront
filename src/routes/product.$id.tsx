@@ -16,10 +16,10 @@ export const Route = createFileRoute("/product/$id")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.product;
-    if (!p) return { meta: [{ title: "Product — Dermora" }] };
+    if (!p) return { meta: [{ title: "Product — BuyTretinoin" }] };
     return {
       meta: [
-        { title: `${p.name} — Dermora` },
+        { title: `${p.name} — BuyTretinoin` },
         { name: "description", content: p.description },
         { property: "og:title", content: p.name },
         { property: "og:description", content: p.description },

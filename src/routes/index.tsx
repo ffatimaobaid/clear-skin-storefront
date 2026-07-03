@@ -5,53 +5,206 @@ import { bestsellers, categories, CATEGORY_IMAGES, CATEGORY_BLURBS } from "@/dat
 import { ProductCard } from "@/components/site/ProductCard";
 import { TrustBadges } from "@/components/site/TrustBadges";
 
+import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import slidePetriImg from "@/assets/slide-petri-dishes.png";
+import slideWomanImg from "@/assets/slide-woman.png";
+import slidePinkImg from "@/assets/slide-pink-bottles.png";
+
+const HERO_SLIDES = [
+  {
+    tagline: "All Concentrations Available",
+    title: "From Beginners to Experts, We've Got You Covered",
+    description: "Gentle, advanced, and everything in between—find your perfect Tretinoin match.",
+    buttonText: "Shop Now",
+    buttonLink: "/shop",
+    image: slidePetriImg,
+    bgClass: "bg-[#F4F7F5]",
+    textClass: "text-foreground",
+    btnBgClass: "bg-primary hover:bg-primary/95 text-primary-foreground",
+  },
+  {
+    tagline: "Global Shipping",
+    title: "Skincare Confidence Delivered Globally",
+    description: "Premium Tretinoin products, shipped securely to your doorstep, no matter where you are.",
+    buttonText: "Shop Now",
+    buttonLink: "/shop",
+    image: slideWomanImg,
+    bgClass: "bg-[#F7EFE5]",
+    textClass: "text-foreground",
+    btnBgClass: "bg-primary hover:bg-primary/95 text-primary-foreground",
+  },
+  {
+    tagline: "Buy Tretinoin",
+    title: "Your Ultimate Destination for Tretinoin",
+    description: "Discover dermatologist-approved solutions for acne, anti-aging, and hyperpigmentation.",
+    buttonText: "Shop Now",
+    buttonLink: "/shop",
+    image: slidePinkImg,
+    bgClass: "bg-[#FBF0F3]",
+    textClass: "text-foreground",
+    btnBgClass: "bg-primary hover:bg-primary/95 text-primary-foreground",
+  },
+];
+
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  // Auto-play: advance every 4 s, pause on hover
+  useEffect(() => {
+    if (!api || isHovered) return;
+    const timer = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [api, isHovered]);
+
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-10 md:grid-cols-2 md:items-center md:gap-16 md:px-6 md:pb-20 md:pt-16">
-          <div>
-            <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary">
-              Clinical skincare
-            </span>
-            <h1 className="mt-5 text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-              Prescription-grade skin,<br />
-              <span className="italic text-primary">without the prescription.</span>
-            </h1>
-            <p className="mt-5 max-w-md text-base text-muted-foreground">
-              Genuine tretinoin, retinoids and dermatology-formulated treatments.
-              Shipped worldwide in 5–7 days, discreetly.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                to="/shop"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+      {/* Hero Swiper */}
+      <section
+        className="relative w-full overflow-hidden pt-6 pb-4"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-3 md:-ml-6 py-4">
+            {HERO_SLIDES.map((slide, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-3 md:pl-6 basis-[90%] md:basis-[80%] lg:basis-[74%] transition-all duration-300"
               >
-                Shop all products <ArrowRight size={16} />
-              </Link>
-              <Link
-                to="/categories"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-              >
-                Browse categories
-              </Link>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-secondary/60 blur-2xl" />
-            <img
-              src={heroImg}
-              alt="Curated clinical skincare bottles and jars"
-              width={1600}
-              height={1024}
-              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_20px_60px_-30px_rgba(15,80,70,0.35)]"
+                <div
+                  className={`overflow-hidden rounded-3xl ${slide.bgClass} ${slide.textClass} flex flex-col md:flex-row items-stretch min-h-[420px] md:min-h-[480px] border border-border/40 shadow-sm`}
+                >
+                  {/* Text Container */}
+                  <div className="flex-1 p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+                    <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary w-fit">
+                      {slide.tagline}
+                    </span>
+                    <h2 className="mt-4 text-2xl font-medium leading-[1.1] tracking-tight sm:text-3xl md:text-4xl lg:text-5xl font-display">
+                      {slide.title}
+                    </h2>
+                    <p className="mt-4 max-w-md text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+                      {slide.description}
+                    </p>
+                    <div className="mt-6 md:mt-8">
+                      <Link
+                        to={slide.buttonLink}
+                        className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 hover:scale-[1.02] ${slide.btnBgClass}`}
+                      >
+                        {slide.buttonText} <ArrowRight size={15} />
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Image Container */}
+                  <div className="flex-1 relative min-h-[220px] sm:min-h-[280px] md:min-h-full overflow-hidden order-1 md:order-2">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          {/* Navigation Controls */}
+          <CarouselPrevious className="absolute left-6 sm:left-8 md:left-16 lg:left-24 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-foreground border border-border/60 hover:text-foreground h-10 w-10 shadow-md z-20 transition-transform hover:scale-105" />
+          <CarouselNext className="absolute right-6 sm:right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-foreground border border-border/60 hover:text-foreground h-10 w-10 shadow-md z-20 transition-transform hover:scale-105" />
+        </Carousel>
+
+        {/* Dots Indicator */}
+        <div className="mt-2 flex justify-center gap-2">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                index === current ? "bg-primary w-5" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
+          ))}
+        </div>
+      </section>
+
+      {/* Marquee Banner */}
+      <section className="w-full overflow-hidden bg-[#0A0D0C] text-white py-3 border-y border-white/5">
+        <div className="animate-marquee flex gap-12 text-[11px] font-semibold uppercase tracking-[0.18em] select-none">
+          <div className="flex items-center gap-12">
+            <span>Free Shipping On Orders Over £150</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Discreet Packaging</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>100% Genuine Retinoids</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Dermatologist Approved</span>
+            <span className="text-[#82C3D3]">•</span>
+          </div>
+          <div className="flex items-center gap-12" aria-hidden="true">
+            <span>Free Shipping On Orders Over £150</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Discreet Packaging</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>100% Genuine Retinoids</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Dermatologist Approved</span>
+            <span className="text-[#82C3D3]">•</span>
+          </div>
+          <div className="flex items-center gap-12" aria-hidden="true">
+            <span>Free Shipping On Orders Over £150</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Discreet Packaging</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>100% Genuine Retinoids</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Dermatologist Approved</span>
+            <span className="text-[#82C3D3]">•</span>
+          </div>
+          <div className="flex items-center gap-12" aria-hidden="true">
+            <span>Free Shipping On Orders Over £150</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Discreet Packaging</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>100% Genuine Retinoids</span>
+            <span className="text-[#82C3D3]">•</span>
+            <span>Dermatologist Approved</span>
+            <span className="text-[#82C3D3]">•</span>
           </div>
         </div>
       </section>
+
 
       {/* Trust row */}
       <section className="border-y border-border/60 bg-secondary/40">
@@ -127,7 +280,7 @@ function Home() {
         <div className="rounded-2xl bg-primary px-8 py-14 text-primary-foreground md:px-14">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
-              The Dermora promise
+              The BuyTretinoin promise
             </h2>
             <p className="mt-3 text-sm opacity-90 md:text-base">
               Every product is sourced direct, sealed, and shipped from our dispensary in

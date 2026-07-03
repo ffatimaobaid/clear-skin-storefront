@@ -76,7 +76,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const TITLE = "Dermora — Clinical Skincare & Retinoids";
+const TITLE = "BuyTretinoin — Clinical Skincare & Retinoids";
 const DESC =
   "Genuine tretinoin, retinoids, skin lightening, hair growth and dermatology skincare. Worldwide shipping, discreet delivery.";
 
@@ -87,14 +87,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "author", content: "Dermora" },
+      { name: "author", content: "BuyTretinoin" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
+      { title: "BuyTretinoin" },
+      { property: "og:title", content: "BuyTretinoin" },
+      { name: "twitter:title", content: "BuyTretinoin" },
       { name: "description", content: "An e-commerce store for skincare and dermatology products, featuring tretinoin and retinoids." },
       { property: "og:description", content: "An e-commerce store for skincare and dermatology products, featuring tretinoin and retinoids." },
       { name: "twitter:description", content: "An e-commerce store for skincare and dermatology products, featuring tretinoin and retinoids." },

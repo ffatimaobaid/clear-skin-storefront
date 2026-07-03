@@ -4,7 +4,7 @@ import { productImage } from "@/data/products";
 import { Minus, Plus, Trash2, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/cart")({
-  head: () => ({ meta: [{ title: "Cart — Dermora" }] }),
+  head: () => ({ meta: [{ title: "Cart — BuyTretinoin" }] }),
   component: CartPage,
 });
 

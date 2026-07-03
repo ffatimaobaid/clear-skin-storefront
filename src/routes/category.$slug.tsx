@@ -12,8 +12,8 @@ export const Route = createFileRoute("/category/$slug")({
     const name = loaderData?.cat.name ?? "Category";
     return {
       meta: [
-        { title: `${name} — Dermora` },
-        { name: "description", content: `Shop ${name.toLowerCase()} at Dermora — clinical-grade formulations.` },
+        { title: `${name} — BuyTretinoin` },
+        { name: "description", content: `Shop ${name.toLowerCase()} at BuyTretinoin — clinical-grade formulations.` },
       ],
     };
   },

@@ -4,8 +4,8 @@ import { TrustBadges } from "@/components/site/TrustBadges";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About & FAQ — Dermora" },
-      { name: "description", content: "About Dermora, shipping, delivery times and frequently asked questions." },
+      { title: "About & FAQ — BuyTretinoin" },
+      { name: "description", content: "About BuyTretinoin, shipping, delivery times and frequently asked questions." },
     ],
   }),
   component: About,
@@ -38,13 +38,13 @@ function About() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 md:px-6 md:py-20">
       <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary">
-        About Dermora
+        About BuyTretinoin
       </span>
       <h1 className="mt-5 text-4xl font-medium leading-tight tracking-tight md:text-5xl">
         Clinical skincare, delivered honestly.
       </h1>
       <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-        Dermora is a curated dispensary for genuine tretinoin, retinoids and dermatology-formulated
+        BuyTretinoin is a curated dispensary for genuine tretinoin, retinoids and dermatology-formulated
         treatments. We stock only what we'd use ourselves, ship worldwide in 5–7 days, and answer
         every message personally.
       </p>
@@ -73,7 +73,7 @@ function About() {
       <section className="mt-16 rounded-2xl bg-primary p-8 text-primary-foreground md:p-12">
         <h2 className="text-2xl font-medium tracking-tight md:text-3xl">Still have a question?</h2>
         <p className="mt-2 text-sm opacity-90">
-          Message us on WhatsApp or email hello@dermora.co. We reply within a few hours, 9am–6pm GMT.
+          Message us on WhatsApp or email hello@buytretinoin.com. We reply within a few hours, 9am–6pm GMT.
         </p>
         <Link
           to="/shop"

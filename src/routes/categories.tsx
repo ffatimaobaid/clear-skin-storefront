@@ -4,7 +4,7 @@ import { categories, CATEGORY_IMAGES, CATEGORY_BLURBS, byCategory } from "@/data
 export const Route = createFileRoute("/categories")({
   head: () => ({
     meta: [
-      { title: "Categories — Dermora" },
+      { title: "Categories — BuyTretinoin" },
       { name: "description", content: "Shop by skincare concern: retinoids, lightening, acne, hair growth and more." },
     ],
   }),
