@@ -1,0 +1,610 @@
+{
+  "categories": [
+    {
+      "name": "Tretinoin & Retinoids",
+      "slug": "tretinoin-retinoids"
+    },
+    {
+      "name": "Skin Lightening",
+      "slug": "skin-lightening"
+    },
+    {
+      "name": "Acne & Azelaic Acid",
+      "slug": "acne-azelaic-acid"
+    },
+    {
+      "name": "Hair Growth",
+      "slug": "hair-growth"
+    },
+    {
+      "name": "Eye & Lash Care",
+      "slug": "eye-lash-care"
+    },
+    {
+      "name": "Anti-Aging Serums",
+      "slug": "anti-aging-serums"
+    },
+    {
+      "name": "Sunscreen & Cleansers",
+      "slug": "sunscreen-cleansers"
+    },
+    {
+      "name": "Teeth Whitening",
+      "slug": "teeth-whitening"
+    }
+  ],
+  "products": [
+    {
+      "id": "10-minoxidil-hair-growth-solution-60ml",
+      "name": "10% Minoxidil Hair growth Solution 60ml",
+      "category": "Hair Growth",
+      "categorySlug": "hair-growth",
+      "price": 24.99,
+      "prescription": false,
+      "description": "Scalp-focused treatment engineered to reactivate follicles, reduce shedding and support visibly thicker, healthier hair growth.",
+      "rating": 4.6,
+      "reviews": 165
+    },
+    {
+      "id": "20-azelaic-acid-cream-30g-azelderm",
+      "name": "20% Azelaic Acid Cream 30G Azelderm",
+      "category": "Acne & Azelaic Acid",
+      "categorySlug": "acne-azelaic-acid",
+      "price": 29.99,
+      "prescription": false,
+      "description": "High-strength azelaic acid treatment that calms redness, clears breakouts and evens tone. A go-to for sensitive, acne-prone and rosacea-prone skin.",
+      "rating": 4.8,
+      "reviews": 252
+    },
+    {
+      "id": "20-vitamin-c-vitamin-e-ferulic-acid-serum-30ml-no-box",
+      "name": "20% Vitamin C+ Vitamin E + Ferulic Acid Serum 30ml (No Box)",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 14.95,
+      "prescription": false,
+      "description": "Concentrated anti-aging serum with actives that firm, smooth and restore youthful bounce. Layers cleanly under moisturiser and SPF.",
+      "rating": 4.5,
+      "reviews": 160
+    },
+    {
+      "id": "25-hydrogen-peroxide-professional-teeth-whitening-kit",
+      "name": "25% Hydrogen Peroxide Professional Teeth Whitening kit",
+      "category": "Teeth Whitening",
+      "categorySlug": "teeth-whitening",
+      "price": 21.99,
+      "prescription": false,
+      "description": "Professional-grade whitening system for visibly brighter teeth in days. Even application, low sensitivity, salon-quality result at home.",
+      "rating": 4.9,
+      "reviews": 127
+    },
+    {
+      "id": "3d-face-lift-anti-aging-serum-30ml",
+      "name": "3D Face Lift Anti-Aging Serum 30ml",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 12.95,
+      "prescription": false,
+      "description": "Concentrated anti-aging serum with actives that firm, smooth and restore youthful bounce. Layers cleanly under moisturiser and SPF.",
+      "rating": 4.4,
+      "reviews": 132
+    },
+    {
+      "id": "4-in-1-anti-aging-firming-lifting-serum-30-ml",
+      "name": "4 In 1 Anti-Aging Firming Lifting Serum 30 ML",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 12.5,
+      "prescription": false,
+      "description": "Concentrated anti-aging serum with actives that firm, smooth and restore youthful bounce. Layers cleanly under moisturiser and SPF.",
+      "rating": 4.5,
+      "reviews": 42
+    },
+    {
+      "id": "42-urea-cream-salicylic-acid-2-jojoba-oil-aloe-vera-hyaluronic-acid-shea-butter-camellia-seed-oil-100g-no-box",
+      "name": "42% Urea Cream + Salicylic Acid 2% + Jojoba Oil + Aloe Vera + Hyaluronic Acid + Shea Butter + Camellia Seed Oil 100G NO BOX",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 10.95,
+      "prescription": false,
+      "description": "Deeply nourishing repair cream that rebuilds a compromised barrier, softens rough patches and locks in hydration for calm, resilient skin.",
+      "rating": 4.4,
+      "reviews": 185
+    },
+    {
+      "id": "a-ret-tretinoin-gel-0-025-retin-a-gel-20g",
+      "name": "A-Ret Tretinoin Gel 0.025% Retin-A Gel 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 22.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.6,
+      "reviews": 46
+    },
+    {
+      "id": "a-ret-tretinoin-gel-0-05",
+      "name": "A-Ret Tretinoin Gel 0.05%",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 23.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.4,
+      "reviews": 89
+    },
+    {
+      "id": "acne-scar-removal-stretch-mark-removal-ointment-gel-30g",
+      "name": "Acne Scar Removal / Stretch Mark Removal Ointment Gel 30G",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 7.95,
+      "prescription": false,
+      "description": "Premium skincare formulation crafted to deliver visible, dermatologist-informed results with consistent daily use.",
+      "rating": 4.6,
+      "reviews": 96
+    },
+    {
+      "id": "acnelyse-tretinoin-cream-0-1-20g",
+      "name": "Acnelyse Tretinoin Cream 0.1% 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 33.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.4,
+      "reviews": 102
+    },
+    {
+      "id": "adapalene-0-1-gel-15g",
+      "name": "Adapalene 0.1% Gel 15G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 11.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.6,
+      "reviews": 263
+    },
+    {
+      "id": "azelaic-acid-cream-20-15g",
+      "name": "Azelaic Acid Cream 20% 15G",
+      "category": "Acne & Azelaic Acid",
+      "categorySlug": "acne-azelaic-acid",
+      "price": 12.95,
+      "prescription": true,
+      "description": "High-strength azelaic acid treatment that calms redness, clears breakouts and evens tone. A go-to for sensitive, acne-prone and rosacea-prone skin.",
+      "rating": 4.3,
+      "reviews": 96
+    },
+    {
+      "id": "azelaic-acid-cream-20-15g-new-stock",
+      "name": "Azelaic Acid Cream 20% 15G (New Stock)",
+      "category": "Acne & Azelaic Acid",
+      "categorySlug": "acne-azelaic-acid",
+      "price": 21.99,
+      "prescription": false,
+      "description": "High-strength azelaic acid treatment that calms redness, clears breakouts and evens tone. A go-to for sensitive, acne-prone and rosacea-prone skin.",
+      "rating": 4.7,
+      "reviews": 55
+    },
+    {
+      "id": "azelaic-acid-gel-20-20g-azelax",
+      "name": "Azelaic Acid Gel 20% 20G (Azelax)",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 21.99,
+      "prescription": false,
+      "description": "High-strength azelaic acid treatment that calms redness, clears breakouts and evens tone. A go-to for sensitive, acne-prone and rosacea-prone skin.",
+      "rating": 4.7,
+      "reviews": 207
+    },
+    {
+      "id": "aziderm-azelaic-acid-gel-20-15g",
+      "name": "Aziderm Azelaic Acid Gel 20% 15G",
+      "category": "Acne & Azelaic Acid",
+      "categorySlug": "acne-azelaic-acid",
+      "price": 21.99,
+      "prescription": false,
+      "description": "High-strength azelaic acid treatment that calms redness, clears breakouts and evens tone. A go-to for sensitive, acne-prone and rosacea-prone skin.",
+      "rating": 4.5,
+      "reviews": 159
+    },
+    {
+      "id": "biluma-cream-melasma-pigmentation-skin-lightening-acne-scarring-15g",
+      "name": "Biluma Cream (Melasma / Pigmentation / Skin Lightening / Acne Scarring) 15g",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 18.99,
+      "prescription": false,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.6,
+      "reviews": 250
+    },
+    {
+      "id": "blinq-i-lash-3ml-serum",
+      "name": "Blinq-I-Lash 3ml Serum",
+      "category": "Eye & Lash Care",
+      "categorySlug": "eye-lash-care",
+      "price": 22.95,
+      "prescription": false,
+      "description": "Lash-conditioning serum that promotes longer, fuller, darker lashes over 8-12 weeks. Applied once daily to a clean lash line.",
+      "rating": 4.9,
+      "reviews": 263
+    },
+    {
+      "id": "careprost-eyelash-growth-serum-drops-1-bottle-3ml-2-months-supply",
+      "name": "Careprost Eyelash Growth Serum Drops 1 Bottle 3ml (2 Months Supply)",
+      "category": "Eye & Lash Care",
+      "categorySlug": "eye-lash-care",
+      "price": 26.99,
+      "prescription": true,
+      "description": "Lash-conditioning serum that promotes longer, fuller, darker lashes over 8-12 weeks. Applied once daily to a clean lash line.",
+      "rating": 4.9,
+      "reviews": 282
+    },
+    {
+      "id": "careprost-eyelash-growth-serum-drops-3-bottles-3ml-6-months-supply",
+      "name": "Careprost Eyelash Growth Serum Drops 3 Bottles 3ml (6 Months Supply)",
+      "category": "Eye & Lash Care",
+      "categorySlug": "eye-lash-care",
+      "price": 65.49,
+      "prescription": true,
+      "description": "Lash-conditioning serum that promotes longer, fuller, darker lashes over 8-12 weeks. Applied once daily to a clean lash line.",
+      "rating": 4.6,
+      "reviews": 68
+    },
+    {
+      "id": "demelan-cream-20g",
+      "name": "Demelan Cream 20G",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 13.99,
+      "prescription": false,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.4,
+      "reviews": 122
+    },
+    {
+      "id": "eyebliss-under-eye-cream-vitamin-c-20-face-serum-15g",
+      "name": "Eyebliss Under Eye Cream Vitamin C 20% Face Serum 15G",
+      "category": "Eye & Lash Care",
+      "categorySlug": "eye-lash-care",
+      "price": 19.99,
+      "prescription": false,
+      "description": "Lightweight eye treatment that de-puffs, smooths fine lines and brightens tired under-eyes without heaviness or migration.",
+      "rating": 4.4,
+      "reviews": 284
+    },
+    {
+      "id": "hydroquinone-cream-4-melalite-forte-30g",
+      "name": "Hydroquinone Cream 4% Melalite Forte 30G",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 26.99,
+      "prescription": true,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.9,
+      "reviews": 261
+    },
+    {
+      "id": "instafil-gel-instant-wrinkle-filler-perfect-primer-15ml-no-box-x2",
+      "name": "Instafil Gel Instant Wrinkle Filler / Perfect Primer (15ml) NO BOX x2",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 16.95,
+      "prescription": false,
+      "description": "Concentrated anti-aging serum with actives that firm, smooth and restore youthful bounce. Layers cleanly under moisturiser and SPF.",
+      "rating": 4.8,
+      "reviews": 73
+    },
+    {
+      "id": "kojic-acid-glutamine-brightening-lightening-soap-bar-150g",
+      "name": "Kojic Acid & Glutamine Brightening Lightening Soap Bar 150G",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 9.95,
+      "prescription": false,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.6,
+      "reviews": 139
+    },
+    {
+      "id": "kozicare-skin-lightening-cream-with-spf30-15g",
+      "name": "Kozicare Skin Lightening Cream with SPF30 15G",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 17.95,
+      "prescription": false,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.7,
+      "reviews": 141
+    },
+    {
+      "id": "kozimax-skin-lightening-cream-15g",
+      "name": "Kozimax Skin Lightening Cream 15G",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 16.99,
+      "prescription": false,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.6,
+      "reviews": 53
+    },
+    {
+      "id": "lipidz-rapid-barrier-repair-cream-50ml-no-box",
+      "name": "LIPIDZ Rapid Barrier Repair Cream 50ML (No Box)",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 17.99,
+      "prescription": false,
+      "description": "Deeply nourishing repair cream that rebuilds a compromised barrier, softens rough patches and locks in hydration for calm, resilient skin.",
+      "rating": 4.4,
+      "reviews": 267
+    },
+    {
+      "id": "lumigan-bimatoprost-lash-enhancer-3ml",
+      "name": "Lumigan Bimatoprost Lash Enhancer 3ml",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 23.99,
+      "prescription": true,
+      "description": "Lash-conditioning serum that promotes longer, fuller, darker lashes over 8-12 weeks. Applied once daily to a clean lash line.",
+      "rating": 4.5,
+      "reviews": 292
+    },
+    {
+      "id": "melacare-hydroquinone-tretinoin-mometasone-furoate-cream-25gm",
+      "name": "Melacare Hydroquinone Tretinoin & Mometasone Furoate Cream 25Gm",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 22.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.8,
+      "reviews": 142
+    },
+    {
+      "id": "melano-tx-tranexamic-acid-cream-15g",
+      "name": "Melano-TX Tranexamic Acid Cream 15G",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 21.5,
+      "prescription": false,
+      "description": "Premium skincare formulation crafted to deliver visible, dermatologist-informed results with consistent daily use.",
+      "rating": 4.8,
+      "reviews": 183
+    },
+    {
+      "id": "my-tret-tretinoin-microsphere-gel-0-1-15g",
+      "name": "My Tret Tretinoin Microsphere Gel 0.1% 15G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 22.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.9,
+      "reviews": 82
+    },
+    {
+      "id": "perfect-pout-lip-plump-gloss-10ml",
+      "name": "Perfect Pout Lip Plump & Gloss 10ml",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 4.95,
+      "prescription": false,
+      "description": "Concentrated anti-aging serum with actives that firm, smooth and restore youthful bounce. Layers cleanly under moisturiser and SPF.",
+      "rating": 4.6,
+      "reviews": 124
+    },
+    {
+      "id": "rapid-hair-growth-hair-loss-caffeine-shampoo-energizer-100ml",
+      "name": "Rapid Hair Growth / Hair Loss Caffeine Shampoo Energizer 100ml",
+      "category": "Hair Growth",
+      "categorySlug": "hair-growth",
+      "price": 7.95,
+      "prescription": false,
+      "description": "Scalp-focused treatment engineered to reactivate follicles, reduce shedding and support visibly thicker, healthier hair growth.",
+      "rating": 4.9,
+      "reviews": 269
+    },
+    {
+      "id": "reti-k-premium-pure-micro-capsulized-retinol-anti-aging-cream-30g",
+      "name": "Reti K Premium Pure Micro Capsulized Retinol Anti-Aging Cream 30G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 19.99,
+      "prescription": false,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.6,
+      "reviews": 205
+    },
+    {
+      "id": "skin-light-hydroquinone-tretinoin-mometasone-furoate-25g",
+      "name": "Skin Light Hydroquinone + Tretinoin + Mometasone Furoate 25G",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 24.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.3,
+      "reviews": 236
+    },
+    {
+      "id": "tazorac-cream-tazarotene-cream-0-1",
+      "name": "Tazorac Cream (Tazarotene Cream) 0.1%",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 24.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.8,
+      "reviews": 92
+    },
+    {
+      "id": "tretimaxx-0-1-tretinoin-cream-20g",
+      "name": "Tretimaxx 0.1% Tretinoin Cream 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 20.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.5,
+      "reviews": 156
+    },
+    {
+      "id": "tretin-tretinoin-cream-0-05-large-30g",
+      "name": "Tretin Tretinoin Cream 0.05% Large 30G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 29.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.7,
+      "reviews": 46
+    },
+    {
+      "id": "tretinoin-0-025-tretiheal-cream-20g",
+      "name": "Tretinoin 0.025% Tretiheal Cream 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 22.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.4,
+      "reviews": 234
+    },
+    {
+      "id": "tretinoin-0-05-tretiheal-cream-20g",
+      "name": "Tretinoin 0.05% Tretiheal Cream 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 23.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.3,
+      "reviews": 274
+    },
+    {
+      "id": "tretinoin-0-1-cream-20g",
+      "name": "Tretinoin 0.1% Cream 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 24.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.7,
+      "reviews": 262
+    },
+    {
+      "id": "tretinoin-0-1-microsphere-20g",
+      "name": "Tretinoin 0.1% Microsphere 20G",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 14.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.5,
+      "reviews": 63
+    },
+    {
+      "id": "tretinoin-cream-0-025-large-30g-tretin",
+      "name": "Tretinoin Cream 0.025% Large 30G (Tretin)",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 29.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.6,
+      "reviews": 55
+    },
+    {
+      "id": "tretinoin-gel-0-1-20g",
+      "name": "Tretinoin Gel 0.1% 20G",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 24.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.5,
+      "reviews": 170
+    },
+    {
+      "id": "tretinoin-gel-0-1-20g-alt-batch",
+      "name": "Tretinoin Gel 0.1% 20G (alt batch)",
+      "category": "Tretinoin & Retinoids",
+      "categorySlug": "tretinoin-retinoids",
+      "price": 23.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.4,
+      "reviews": 168
+    },
+    {
+      "id": "tri-luma-cream",
+      "name": "Tri-Luma Cream",
+      "category": "Skin Lightening",
+      "categorySlug": "skin-lightening",
+      "price": 24.99,
+      "prescription": true,
+      "description": "Targeted brightening formula that fades melasma, dark spots and post-acne marks for a clearer, more even complexion with consistent use.",
+      "rating": 4.8,
+      "reviews": 193
+    },
+    {
+      "id": "v34-effective-violet-colour-corrector-teeth-whitening-toothpaste-30ml",
+      "name": "V34 Effective Violet Colour Corrector Teeth Whitening Toothpaste 30ml",
+      "category": "Teeth Whitening",
+      "categorySlug": "teeth-whitening",
+      "price": 19.99,
+      "prescription": false,
+      "description": "Professional-grade whitening system for visibly brighter teeth in days. Even application, low sensitivity, salon-quality result at home.",
+      "rating": 4.5,
+      "reviews": 136
+    },
+    {
+      "id": "vitamin-c-cleanser-facial-soap-free-70ml",
+      "name": "Vitamin C Cleanser Facial Soap Free 70ml",
+      "category": "Sunscreen & Cleansers",
+      "categorySlug": "sunscreen-cleansers",
+      "price": 9.95,
+      "prescription": false,
+      "description": "Gentle daily cleanser that lifts impurities, sunscreen and makeup while respecting the skin barrier \u2014 leaves skin soft, never tight.",
+      "rating": 4.6,
+      "reviews": 296
+    },
+    {
+      "id": "wrinkle-blur-under-eye-bag-removal-makeup-primer-30ml",
+      "name": "Wrinkle Blur Under Eye Bag Removal & Makeup Primer 30ml",
+      "category": "Anti-Aging Serums",
+      "categorySlug": "anti-aging-serums",
+      "price": 9.95,
+      "prescription": false,
+      "description": "Lightweight eye treatment that de-puffs, smooths fine lines and brightens tired under-eyes without heaviness or migration.",
+      "rating": 4.7,
+      "reviews": 46
+    },
+    {
+      "id": "xtralight-tretinoin-0-05-azelaic-acid-10-cream-15g",
+      "name": "Xtralight Tretinoin 0.05% Azelaic Acid 10% Cream 15G",
+      "category": "Acne & Azelaic Acid",
+      "categorySlug": "acne-azelaic-acid",
+      "price": 14.99,
+      "prescription": true,
+      "description": "Clinical-strength retinoid formulated to renew skin cell turnover, smooth texture and fade blemishes. Dermatologist-favourite active in a gentle, absorbable base.",
+      "rating": 4.6,
+      "reviews": 175
+    },
+    {
+      "id": "z-block-sunscreen-anti-aging-spf-50-water-based-gel-50ml",
+      "name": "Z-Block Sunscreen Anti-Aging SPF 50 Water Based Gel 50ml",
+      "category": "Sunscreen & Cleansers",
+      "categorySlug": "sunscreen-cleansers",
+      "price": 24.99,
+      "prescription": false,
+      "description": "Broad-spectrum SPF 50 in a weightless water-based gel. Sits invisibly under makeup and protects treated skin from UV damage.",
+      "rating": 4.3,
+      "reviews": 187
+    }
+  ]
+}
